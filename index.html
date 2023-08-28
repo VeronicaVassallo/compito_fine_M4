@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySpaceCommerce</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="container-fluid">
+    <div class="row">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="#">MySpaceCommerce</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-flex align-items-center">
+                <li class="nav-item">
+                  <a class="nav-link" href="./editProducts.html">Backoffice</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#exampleModal2" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+                    <div >
+                      <img id="alien" class="mx-2" src="https://thumbs.dreamstime.com/z/funny-alien-28035883.jpg?w=576" style="width:40px; height: 40px; border-radius: 50%;" alt="">
+                      <div class="pointGreen text-dark">
+                        <p id="quantity" class="text-center">0</p>
+                      </div>
+                    </div>
+                  </a>
+                </li>  
+              </ul>
+              <form class="d-flex">
+                <input id="inpuntValue" class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" onclick="SearchProduct()" type="button">cerca</button>
+              </form>
+            </div>
+          </div>
+        </nav>
+    </div>
+  </header>
+
+  <div class="container-fluid jambotron">
+    <div class="row">
+      <div class="mt-4 p-5 text-white rounded">
+        <h1>Tutta la tua Tecnologia a portata di un click!</h1>
+        <p>Piu di 100 modelli di smartphones, computers, tablets, videogames... e tanto altro ancora</p>
+      </div>
+    </div>
+  </div>
+
+  <section class="container-fluid">
+
+    <div class="row">
+
+  <!-- Modal Carrello -->
+  <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel2" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel2">Il tuo carrello: </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <ul id="carrello" class="bin">
+          </ul>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
+          <button type="button" class="btn btn-primary">Procedi all'ordine</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    </div>
+
+    <div id="loader" class="lds-roller">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+
+  </section>
+
+    <main class="container-fluid">
+
+      <div class="row" id="ContainerCards">
+    
+
+
+
+      </div>
+
+    </main>
+
+    <script src="./bootstrap-5.0.2-dist/bootstrap-5.0.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="main.js"></script>
+
+</body>
+</html>
